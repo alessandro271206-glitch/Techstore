@@ -10,12 +10,15 @@ Control de precio y stock por producto.
 Registro de ventas con detalle por producto (cantidad, precio unitario y subtotal).
 Cálculo automático de subtotal, IGV (18 %) y total por venta.
 Gestión de usuarios con tres roles: Administrador, Vendedor y Supervisor.
+
 🧰 Tecnologías
 Capa	Tecnología
 Frontend	Angular 22, Angular Material, Angular CDK, Angular SSR, RxJS, TypeScript
 Backend	Java 17, Spring Boot 4.1.2, Spring Web, Spring Data JPA, Lombok
 Base de datos	MySQL 8
 Herramientas	Maven, npm, Git
+
+
 🗄️ Modelo de datos
 
 La base de datos techstore contiene cinco tablas:
@@ -29,11 +32,13 @@ detalle_venta	Líneas de cada venta: venta, producto, cantidad, precio unitario 
 
 Relaciones: un usuario pertenece a un rol; una venta tiene muchos detalle_venta; cada detalle_venta referencia a un producto.
 
+
 ⚙️ Requisitos previos
 Java JDK 17
 Maven (o el wrapper incluido en el proyecto)
 Node.js y npm, en una versión compatible con Angular 22
 MySQL 8
+
 
 👤 Autor
 
