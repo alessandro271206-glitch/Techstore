@@ -1,0 +1,12 @@
+<div style="max-width: 400px; margin: 100px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; text-align: center;">
+  <h2>Acceso a TechStore</h2>
+  
+  <p *ngIf="error" style="color: red;">Credenciales incorrectas</p>
+
+  <input type="text" [(ngModel)]="correo" placeholder="Correo electrónico" style="width: 90%; padding: 10px; margin-bottom: 15px;"><br>
+  <input type="password" [(ngModel)]="password" placeholder="Contraseña" style="width: 90%; padding: 10px; margin-bottom: 15px;"><br>
+  
+  <button (click)="ingresar()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer;">
+    Ingresar
+  </button>
+</div>

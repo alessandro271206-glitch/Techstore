@@ -1,0 +1,35 @@
+<h2>Registrar Nuevo Producto</h2>
+
+<form [formGroup]="formularioProducto" (ngSubmit)="guardarProducto()" style="display: flex; flex-direction: column; max-width: 400px;">
+
+  <mat-form-field appearance="fill" style="margin-bottom: 10px;">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" placeholder="Ej. Laptop Lenovo" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="margin-bottom: 10px;">
+    <mat-label>Categoría</mat-label>
+    <input matInput formControlName="categoria" placeholder="Ej. Laptops" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="margin-bottom: 10px;">
+    <mat-label>Precio</mat-label>
+    <input matInput type="number" formControlName="precio" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="margin-bottom: 15px;">
+    <mat-label>Stock</mat-label>
+    <input matInput type="number" formControlName="stock" required>
+  </mat-form-field>
+
+  <div style="display: flex; gap: 10px;">
+    <button mat-raised-button color="primary" type="submit" [disabled]="formularioProducto.invalid">
+      Guardar
+    </button>
+    <button mat-button type="button" routerLink="/productos">
+      Volver
+    </button>
+  </div>
+
+</form>
+

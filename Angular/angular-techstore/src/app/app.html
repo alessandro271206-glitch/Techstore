@@ -1,0 +1,30 @@
+
+<nav *ngIf="authService.estaLogueado()" style="background-color: #333; padding: 15px; display: flex; gap: 20px; align-items: center;">
+  
+  <span style="color: white; font-weight: bold; margin-right: 20px;">⚙️ TechStore</span>
+
+  
+  <a *ngIf="authService.esAdministrador()" routerLink="/productos" style="color: white; text-decoration: none;">
+    Productos
+  </a>
+
+ 
+  <a *ngIf="authService.esAdministrador() || authService.esVendedor() || authService.esSupervisor()" routerLink="/ventas" style="color: white; text-decoration: none;">
+    Ventas
+  </a>
+
+  
+  <a *ngIf="authService.esAdministrador() || authService.esSupervisor()" routerLink="/reportes" style="color: white; text-decoration: none;">
+    Reportes
+  </a>
+
+ 
+  <button (click)="cerrarSesion()" style="margin-left: auto; background-color: #dc3545; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">
+    Cerrar Sesión
+  </button>
+</nav>
+
+
+<div style="padding: 20px;">
+  <router-outlet></router-outlet>
+</div>

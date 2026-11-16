@@ -1,0 +1,33 @@
+<h2>Mantenimiento de Productos</h2>
+
+<button routerLink="/formulario-producto" style="margin-bottom: 15px; padding: 5px 10px;">Nuevo Producto</button>
+
+<table border="1" cellpadding="10">
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Categoría</th>
+    <th>Precio</th>
+    <th>Stock</th>
+    <th>Acciones</th>
+  </tr>
+  
+ 
+  @for (p of productos; track p.id) {
+    <tr>
+      <td>{{ p.id }}</td>
+      <td>{{ p.nombre }}</td>
+      <td>{{ p.categoria }}</td>
+      <td>{{ p.precio }}</td>
+      <td>{{ p.stock }}</td>
+      <td>
+        <button (click)="eliminar(p.id)" style="color: red;">Eliminar</button>
+      </td>
+    </tr>
+  } @empty {
+    <tr>
+      <td colspan="6">Cargando productos...</td>
+    </tr>
+  }
+</table>
+
